@@ -1,0 +1,375 @@
+{
+  "categories": {
+    "inteligencia-artificial": "Inteligencia Artificial",
+    "diseno": "Diseño",
+    "desarrollo": "Desarrollo",
+    "marketing": "Marketing",
+    "productividad": "Productividad",
+    "finanzas": "Finanzas",
+    "analitica": "Analítica",
+    "atencion-al-cliente": "Atención al cliente",
+    "ventas": "Ventas",
+    "recursos-humanos": "Recursos Humanos",
+    "educacion": "Educación",
+    "seo": "SEO",
+    "redes-sociales": "Redes sociales",
+    "video": "Video",
+    "fotografia": "Fotografía",
+    "automatizacion": "Automatización",
+    "colaboracion": "Colaboración",
+    "seguridad": "Seguridad",
+    "no-code": "No-code",
+    "apis-y-datos": "APIs y datos"
+  },
+  "metadata": {
+    "titleDefault": "Directory — encuentra las mejores herramientas",
+    "titleTemplate": "%s | Directory",
+    "description": "Directorio de herramientas y recursos con listados verificados, reseñas y planes de publicación."
+  },
+  "demoBanner": {
+    "label": "Demo en vivo",
+    "text": "Esto es una demo en vivo. Prueba el panel de admin o el panel de usuario con estas credenciales.",
+    "admin": "Admin",
+    "user": "Usuario",
+    "copied": "Copiado al portapapeles",
+    "dismiss": "Cerrar"
+  },
+  "nav": {
+    "directory": "Directorio",
+    "pricing": "Precios",
+    "publishListing": "Publicar listado",
+    "dashboard": "Panel",
+    "administration": "Administración",
+    "signOut": "Cerrar sesión",
+    "signIn": "Iniciar sesión",
+    "createAccount": "Crear cuenta",
+    "changeTheme": "Cambiar tema",
+    "brand": "Directory",
+    "menu": "Menú"
+  },
+  "search": {
+    "placeholder": "Buscar herramientas, recursos…"
+  },
+  "bookmarksPage": {
+    "title": "Listados guardados",
+    "backToDashboard": "Volver al panel",
+    "empty": "No has guardado ningún listado todavía.",
+    "browseCta": "Explorar el directorio"
+  },
+  "listingGrid": {
+    "noResults": "No encontramos resultados con esos filtros."
+  },
+  "listingForm": {
+    "steps": {
+      "info": "Información",
+      "media": "Multimedia",
+      "plan": "Plan"
+    },
+    "title": "Título",
+    "titlePlaceholder": "Nombre de tu herramienta",
+    "category": "Categoría",
+    "categoryPlaceholder": "Selecciona una categoría",
+    "tags": "Tags",
+    "tagsPlaceholder": "Escribe y pulsa Enter",
+    "addTag": "Añadir",
+    "websiteUrl": "URL del sitio web",
+    "description": "Descripción",
+    "descriptionPlaceholder": "Describe qué hace tu herramienta…",
+    "logo": "Logo",
+    "logoAlt": "Logo",
+    "remove": "Quitar",
+    "gallery": "Galería (hasta 6 imágenes)",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "sending": "Enviando…",
+    "publish": "Publicar listado",
+    "updatedSuccess": "Listado actualizado y enviado a revisión",
+    "createdSuccess": "Listado enviado a revisión",
+    "plans": {
+      "basic": {
+        "label": "Basic Listing",
+        "price": "Gratis"
+      },
+      "featured": {
+        "label": "Featured Listing",
+        "price": "$29/mes"
+      },
+      "sponsor": {
+        "label": "Top Sponsor",
+        "price": "$99/mes"
+      }
+    }
+  },
+  "admin": {
+    "title": "Administración",
+    "nav": {
+      "listings": "Listados",
+      "reviews": "Reseñas",
+      "claims": "Reclamaciones",
+      "users": "Usuarios",
+      "payments": "Pagos"
+    },
+    "stats": {
+      "totalUsers": "Usuarios totales",
+      "publishedListings": "Listados publicados",
+      "pendingReview": "Pendientes de revisión",
+      "pendingReviews": "Reseñas pendientes",
+      "pendingClaims": "Reclamaciones pendientes",
+      "activeSubscriptions": "Suscripciones activas",
+      "estimatedMrr": "MRR estimado"
+    },
+    "pendingModeration": "Moderación pendiente",
+    "noPendingListings": "No hay listados pendientes de revisión.",
+    "approve": "Aprobar",
+    "reject": "Rechazar",
+    "listingApproved": "Listado aprobado",
+    "listingRejected": "Listado rechazado",
+    "rejectReasonTitle": "Motivo del rechazo (opcional)",
+    "rejectReasonPlaceholder": "Explica por qué se rechaza…",
+    "confirmReject": "Confirmar rechazo",
+    "allListings": "Todos los listados",
+    "author": "Autor",
+    "status": "Estado",
+    "plan": "Plan",
+    "pendingReviewsTitle": "Reseñas pendientes",
+    "noPendingReviews": "No hay reseñas pendientes de moderación.",
+    "reviewPublished": "Reseña publicada",
+    "reviewDeleted": "Reseña eliminada",
+    "pendingClaimsTitle": "Reclamaciones pendientes",
+    "noPendingClaims": "No hay solicitudes de reclamación pendientes.",
+    "requestedBy": "Solicitado por {name} ({email})",
+    "claimApproved": "Reclamación aprobada, el listado cambió de propietario",
+    "claimRejected": "Reclamación rechazada",
+    "usersTitle": "Usuarios",
+    "user": "Usuario",
+    "listingsCount": "Listados",
+    "registered": "Registrado",
+    "role": "Rol",
+    "roleUpdated": "Rol actualizado",
+    "paymentsTitle": "Pagos y suscripciones",
+    "renews": "Renueva",
+    "since": "Desde",
+    "featuredCol": "Destacado",
+    "featuredUpdated": "Estado de destacado actualizado",
+    "exportCsv": "Exportar CSV",
+    "noSubscriptions": "Todavía no hay suscripciones registradas."
+  },
+  "listingActions": {
+    "edit": "Editar",
+    "pause": "Pausar",
+    "republish": "Republicar",
+    "delete": "Eliminar",
+    "paused": "Listado pausado",
+    "sentToReview": "Enviado a revisión",
+    "deleted": "Listado eliminado",
+    "genericError": "Algo salió mal"
+  },
+  "listingPages": {
+    "newTitle": "Publicar un nuevo listado",
+    "editTitle": "Editar listado",
+    "analyticsSubtitle": "Analítica de los últimos 14 días",
+    "backToDashboard": "Volver al panel",
+    "totalViews": "Vistas totales",
+    "websiteClicks": "Clics al sitio web",
+    "favorites": "Favoritos",
+    "clicksByDay": "Clics por día",
+    "clicksLabel": "Clics"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "newListing": "Nuevo listado",
+    "myListings": "Mis listados",
+    "favorites": "Favoritos",
+    "noListings": "Todavía no has publicado ningún listado.",
+    "noFavorites": "No has guardado ningún listado todavía.",
+    "viewBookmarks": "Ver todos los guardados",
+    "manageBilling": "Gestionar facturación",
+    "table": {
+      "listing": "Listado",
+      "status": "Estado",
+      "plan": "Plan",
+      "views": "Vistas",
+      "clicks": "Clics",
+      "favorites": "Favoritos"
+    },
+    "status": {
+      "PENDING": "En revisión",
+      "APPROVED": "Publicado",
+      "REJECTED": "Rechazado",
+      "ARCHIVED": "Pausado"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar sesión",
+      "email": "Email",
+      "password": "Contraseña",
+      "signingIn": "Entrando…",
+      "signIn": "Entrar",
+      "continueWithGoogle": "Continuar con Google",
+      "noAccount": "¿No tienes cuenta?",
+      "signUp": "Regístrate",
+      "invalidCredentials": "Email o contraseña incorrectos"
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "name": "Nombre",
+      "email": "Email",
+      "password": "Contraseña",
+      "creating": "Creando…",
+      "create": "Crear cuenta",
+      "hasAccount": "¿Ya tienes cuenta?",
+      "signIn": "Inicia sesión",
+      "success": "Cuenta creada"
+    }
+  },
+  "pricing": {
+    "metaTitle": "Precios",
+    "metaDescription": "Planes de publicación para tu listado en el directorio.",
+    "heading": "Planes de publicación",
+    "subheading": "Elige el plan que mejor se adapte a tu listado.",
+    "popular": "Popular",
+    "free": "Gratis",
+    "perMonth": "/mes",
+    "basic": {
+      "name": "Basic Listing",
+      "description": "Publica tu herramienta y aparece en el directorio.",
+      "features": [
+        "Ficha completa",
+        "Enlace de salida",
+        "Moderación estándar"
+      ],
+      "cta": "Publicar gratis"
+    },
+    "featured": {
+      "name": "Featured Listing",
+      "description": "Más visibilidad y prioridad en resultados de búsqueda.",
+      "features": [
+        "Todo lo de Basic",
+        "Insignia \"Destacado\"",
+        "Prioridad en el listado",
+        "Analítica de clics"
+      ],
+      "cta": "Empezar"
+    },
+    "sponsor": {
+      "name": "Top Sponsor",
+      "description": "Máxima exposición en la home y en categorías clave.",
+      "features": [
+        "Todo lo de Featured",
+        "Posición fija en Inicio",
+        "Insignia \"Sponsor\"",
+        "Soporte prioritario"
+      ],
+      "cta": "Convertirme en Sponsor"
+    }
+  },
+  "categoryPage": {
+    "metaDescriptionFallback": "Listados de la categoría {category}"
+  },
+  "listingDetail": {
+    "reviewsCount": "({count} reseñas)",
+    "reviewsHeading": "Reseñas",
+    "loginToReview": "Inicia sesión para dejar una reseña.",
+    "noReviews": "Aún no hay reseñas para este listado."
+  },
+  "directoryPage": {
+    "metaTitle": "Directorio",
+    "metaDescription": "Explora todos los listados verificados y filtra por categoría, precio y valoración.",
+    "results": "{count} resultados"
+  },
+  "claim": {
+    "verified": "Listado verificado",
+    "pending": "Solicitud de reclamación en revisión",
+    "success": "Solicitud enviada. Un administrador la revisará pronto.",
+    "trigger": "Reclamar este listado",
+    "title": "Reclamar \"{title}\"",
+    "description": "Confirma que eres el propietario o representante de esta empresa. Un administrador revisará tu solicitud antes de transferirte el listado.",
+    "messageLabel": "Cuéntanos cómo verificarlo (opcional)",
+    "messagePlaceholder": "Ej: soy el fundador, mi email corporativo es..., puedo verificarlo desde el dominio de la empresa…",
+    "sending": "Enviando…",
+    "submit": "Enviar solicitud"
+  },
+  "gallery": {
+    "screenshotAlt": "{alt} — captura {index}",
+    "galleryOf": "Galería de {alt}",
+    "close": "Cerrar"
+  },
+  "favorite": {
+    "save": "Guardar",
+    "saved": "Guardado"
+  },
+  "outbound": {
+    "visitWebsite": "Visitar sitio web"
+  },
+  "reviewForm": {
+    "selectRating": "Selecciona una valoración",
+    "placeholder": "Cuéntanos tu experiencia (opcional)",
+    "sending": "Enviando…",
+    "submit": "Enviar reseña",
+    "success": "Reseña enviada, quedará visible tras moderación"
+  },
+  "pagination": {
+    "pageOf": "Página {page} de {pageCount}"
+  },
+  "filters": {
+    "view": "Vista",
+    "sortBy": "Ordenar por",
+    "newest": "Más recientes",
+    "popular": "Más populares",
+    "rating": "Mejor valorados",
+    "price": "Precio",
+    "free": "Gratis",
+    "paid": "De pago",
+    "badges": "Badges",
+    "verified": "Verificado",
+    "featured": "Destacado",
+    "categories": "Categorías",
+    "all": "Todas"
+  },
+  "home": {
+    "featured": "Destacados",
+    "viewAll": "Ver todos",
+    "ctaHeading": "¿Tienes una herramienta o recurso?",
+    "ctaSubheading": "Publícalo gratis, o elige un plan destacado para conseguir más visibilidad.",
+    "ctaPublish": "Publicar listado",
+    "ctaPricing": "Ver precios"
+  },
+  "featureBento": {
+    "heading": "Todo lo que necesitas para destacar",
+    "subheading": "Un directorio pensado tanto para quien busca como para quien publica.",
+    "search": {
+      "title": "Búsqueda instantánea",
+      "description": "Filtra por categoría, precio y valoración sin recargar la página. Resultados en tiempo real."
+    },
+    "verified": {
+      "title": "Listados verificados",
+      "description": "Cada publicación pasa por moderación antes de aparecer en el directorio."
+    },
+    "analytics": {
+      "title": "Analítica incluida",
+      "description": "Vistas, clics y favoritos por listado, disponibles en tu panel."
+    },
+    "featured": {
+      "title": "Destaca tu marca",
+      "description": "Planes Featured y Sponsor para conseguir más visibilidad frente a tu audiencia."
+    }
+  },
+  "stats": {
+    "listings": "Herramientas listadas",
+    "categories": "Categorías",
+    "reviews": "Reseñas verificadas",
+    "clicks": "Clics generados"
+  },
+  "hero": {
+    "badge": "+ de 50 herramientas verificadas",
+    "title": "Encuentra las mejores <highlight>herramientas</highlight> del sector",
+    "subtitle": "Un directorio curado, con reseñas reales y listados verificados. Publica el tuyo en minutos."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "directory": "Directorio",
+    "pricing": "Precios",
+    "publish": "Publicar"
+  }
+}

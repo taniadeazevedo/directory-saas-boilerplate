@@ -1,0 +1,271 @@
+// Directory / Micro-SaaS Boilerplate — Prisma Schema
+// Postgres + Prisma ORM. Run `npx prisma migrate dev` after setting DATABASE_URL.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Auth (Auth.js / NextAuth v5 — Prisma adapter shape)
+// ---------------------------------------------------------------------------
+
+enum Role {
+  USER
+  LISTER
+  ADMIN
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String? // bcrypt hash, only set for credentials sign-up
+  role          Role      @default(USER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts      Account[]
+  sessions      Session[]
+  listings      Listing[]
+  reviews       Review[]
+  favorites     Favorite[]
+  subscriptions Subscription[]
+  clickEvents   ClickEvent[]
+  claimRequests ClaimRequest[]
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+// ---------------------------------------------------------------------------
+// Directory domain
+// ---------------------------------------------------------------------------
+
+enum ListingStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  ARCHIVED
+}
+
+enum ListingPlan {
+  BASIC // free
+  FEATURED // paid, monthly
+  SPONSOR // paid, monthly, top placement
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  icon        String? // lucide icon name
+  description String?
+  createdAt   DateTime @default(now())
+
+  listings Listing[]
+
+  @@map("categories")
+}
+
+model Listing {
+  id          String        @id @default(cuid())
+  title       String
+  slug        String        @unique
+  description String        @db.Text
+  websiteUrl  String
+  logoUrl     String?
+  images      String[]      @default([])
+  category    Category      @relation(fields: [categoryId], references: [id])
+  categoryId  String
+  tags        String[]      @default([])
+
+  plan        ListingPlan   @default(BASIC)
+  isFeatured  Boolean       @default(false)
+  status      ListingStatus @default(PENDING)
+  rejectedReason String?
+
+  viewsCount  Int           @default(0)
+  clicksCount Int           @default(0)
+
+  claimedAt   DateTime?
+  publishedAt DateTime?
+  expiresAt   DateTime? // set for paid plans when the subscription lapses
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  reviews       Review[]
+  favorites     Favorite[]
+  clickEvents   ClickEvent[]
+  claimRequests ClaimRequest[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status, categoryId])
+  @@index([isFeatured])
+  @@map("listings")
+}
+
+enum ClaimStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+// A request from a user to take ownership of a listing that was bulk-imported
+// or created by someone else (e.g. an admin-seeded directory entry). Approving
+// a request transfers `Listing.userId` to the claimant and sets `claimedAt`.
+model ClaimRequest {
+  id      String      @id @default(cuid())
+  status  ClaimStatus @default(PENDING)
+  message String?     @db.Text // e.g. proof of ownership, work email, etc.
+
+  listing   Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  listingId String
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+
+  createdAt  DateTime  @default(now())
+  reviewedAt DateTime?
+
+  @@unique([listingId, userId])
+  @@map("claim_requests")
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  rating    Int // 1-5
+  comment   String?  @db.Text
+  isApproved Boolean @default(false)
+
+  listing   Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  listingId String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+
+  createdAt DateTime @default(now())
+
+  @@unique([listingId, userId])
+  @@map("reviews")
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  listing   Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  listingId String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  createdAt DateTime @default(now())
+
+  @@unique([listingId, userId])
+  @@map("favorites")
+}
+
+// Outbound click-through tracking for a listing's website link
+model ClickEvent {
+  id        String   @id @default(cuid())
+  listing   Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  listingId String
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  userId    String?
+  referrer  String?
+  createdAt DateTime @default(now())
+
+  @@index([listingId, createdAt])
+  @@map("click_events")
+}
+
+// ---------------------------------------------------------------------------
+// Billing (Lemon Squeezy)
+// ---------------------------------------------------------------------------
+
+enum SubscriptionStatus {
+  ON_TRIAL
+  ACTIVE
+  PAUSED
+  PAST_DUE
+  UNPAID
+  CANCELLED
+  EXPIRED
+}
+
+model Subscription {
+  id              String             @id @default(cuid())
+  user            User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId          String
+
+  lemonSqueezyId  String             @unique // subscription id from Lemon Squeezy
+  orderId         String?
+  customerId      String?
+  variantId       String
+  productId       String?
+  plan            ListingPlan        @default(FEATURED)
+  status          SubscriptionStatus @default(ACTIVE)
+
+  renewsAt        DateTime?
+  endsAt          DateTime?
+
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  @@map("subscriptions")
+}
+
+// One-off orders (e.g. a single "Top Sponsor" slot purchase, not a subscription)
+model Order {
+  id             String   @id @default(cuid())
+  userId         String
+  lemonSqueezyId String   @unique
+  variantId      String
+  total          Int // in cents
+  status         String
+  createdAt      DateTime @default(now())
+
+  @@map("orders")
+}

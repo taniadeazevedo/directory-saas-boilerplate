@@ -1,0 +1,375 @@
+{
+  "categories": {
+    "inteligencia-artificial": "Artificial Intelligence",
+    "diseno": "Design",
+    "desarrollo": "Development",
+    "marketing": "Marketing",
+    "productividad": "Productivity",
+    "finanzas": "Finance",
+    "analitica": "Analytics",
+    "atencion-al-cliente": "Customer Support",
+    "ventas": "Sales",
+    "recursos-humanos": "Human Resources",
+    "educacion": "Education",
+    "seo": "SEO",
+    "redes-sociales": "Social Media",
+    "video": "Video",
+    "fotografia": "Photography",
+    "automatizacion": "Automation",
+    "colaboracion": "Collaboration",
+    "seguridad": "Security",
+    "no-code": "No-code",
+    "apis-y-datos": "APIs & Data"
+  },
+  "metadata": {
+    "titleDefault": "Directory — find the best tools",
+    "titleTemplate": "%s | Directory",
+    "description": "A directory of tools and resources with verified listings, reviews and publishing plans."
+  },
+  "demoBanner": {
+    "label": "Live demo",
+    "text": "This is a live demo. Try the admin panel or the user dashboard with the credentials below.",
+    "admin": "Admin",
+    "user": "User",
+    "copied": "Copied to clipboard",
+    "dismiss": "Dismiss"
+  },
+  "nav": {
+    "directory": "Directory",
+    "pricing": "Pricing",
+    "publishListing": "Publish listing",
+    "dashboard": "Dashboard",
+    "administration": "Administration",
+    "signOut": "Sign out",
+    "signIn": "Sign in",
+    "createAccount": "Create account",
+    "changeTheme": "Change theme",
+    "brand": "Directory",
+    "menu": "Menu"
+  },
+  "search": {
+    "placeholder": "Search tools, resources…"
+  },
+  "bookmarksPage": {
+    "title": "Saved listings",
+    "backToDashboard": "Back to dashboard",
+    "empty": "You haven't saved any listings yet.",
+    "browseCta": "Browse the directory"
+  },
+  "listingGrid": {
+    "noResults": "We couldn't find any results with those filters."
+  },
+  "listingForm": {
+    "steps": {
+      "info": "Information",
+      "media": "Media",
+      "plan": "Plan"
+    },
+    "title": "Title",
+    "titlePlaceholder": "Your tool's name",
+    "category": "Category",
+    "categoryPlaceholder": "Select a category",
+    "tags": "Tags",
+    "tagsPlaceholder": "Type and press Enter",
+    "addTag": "Add",
+    "websiteUrl": "Website URL",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe what your tool does…",
+    "logo": "Logo",
+    "logoAlt": "Logo",
+    "remove": "Remove",
+    "gallery": "Gallery (up to 6 images)",
+    "back": "Back",
+    "next": "Next",
+    "sending": "Sending…",
+    "publish": "Publish listing",
+    "updatedSuccess": "Listing updated and sent for review",
+    "createdSuccess": "Listing sent for review",
+    "plans": {
+      "basic": {
+        "label": "Basic Listing",
+        "price": "Free"
+      },
+      "featured": {
+        "label": "Featured Listing",
+        "price": "$29/mo"
+      },
+      "sponsor": {
+        "label": "Top Sponsor",
+        "price": "$99/mo"
+      }
+    }
+  },
+  "admin": {
+    "title": "Administration",
+    "nav": {
+      "listings": "Listings",
+      "reviews": "Reviews",
+      "claims": "Claims",
+      "users": "Users",
+      "payments": "Payments"
+    },
+    "stats": {
+      "totalUsers": "Total users",
+      "publishedListings": "Published listings",
+      "pendingReview": "Pending review",
+      "pendingReviews": "Pending reviews",
+      "pendingClaims": "Pending claims",
+      "activeSubscriptions": "Active subscriptions",
+      "estimatedMrr": "Estimated MRR"
+    },
+    "pendingModeration": "Pending moderation",
+    "noPendingListings": "No listings pending review.",
+    "approve": "Approve",
+    "reject": "Reject",
+    "listingApproved": "Listing approved",
+    "listingRejected": "Listing rejected",
+    "rejectReasonTitle": "Reason for rejection (optional)",
+    "rejectReasonPlaceholder": "Explain why it's being rejected…",
+    "confirmReject": "Confirm rejection",
+    "allListings": "All listings",
+    "author": "Author",
+    "status": "Status",
+    "plan": "Plan",
+    "pendingReviewsTitle": "Pending reviews",
+    "noPendingReviews": "No reviews pending moderation.",
+    "reviewPublished": "Review published",
+    "reviewDeleted": "Review deleted",
+    "pendingClaimsTitle": "Pending claims",
+    "noPendingClaims": "No pending claim requests.",
+    "requestedBy": "Requested by {name} ({email})",
+    "claimApproved": "Claim approved, the listing's owner changed",
+    "claimRejected": "Claim rejected",
+    "usersTitle": "Users",
+    "user": "User",
+    "listingsCount": "Listings",
+    "registered": "Registered",
+    "role": "Role",
+    "roleUpdated": "Role updated",
+    "paymentsTitle": "Payments and subscriptions",
+    "renews": "Renews",
+    "since": "Since",
+    "featuredCol": "Featured",
+    "featuredUpdated": "Featured status updated",
+    "exportCsv": "Export CSV",
+    "noSubscriptions": "No subscriptions registered yet."
+  },
+  "listingActions": {
+    "edit": "Edit",
+    "pause": "Pause",
+    "republish": "Republish",
+    "delete": "Delete",
+    "paused": "Listing paused",
+    "sentToReview": "Sent for review",
+    "deleted": "Listing deleted",
+    "genericError": "Something went wrong"
+  },
+  "listingPages": {
+    "newTitle": "Publish a new listing",
+    "editTitle": "Edit listing",
+    "analyticsSubtitle": "Analytics for the last 14 days",
+    "backToDashboard": "Back to dashboard",
+    "totalViews": "Total views",
+    "websiteClicks": "Website clicks",
+    "favorites": "Favorites",
+    "clicksByDay": "Clicks by day",
+    "clicksLabel": "Clicks"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "newListing": "New listing",
+    "myListings": "My listings",
+    "favorites": "Favorites",
+    "noListings": "You haven't published any listings yet.",
+    "noFavorites": "You haven't saved any listings yet.",
+    "viewBookmarks": "View all saved listings",
+    "manageBilling": "Manage billing",
+    "table": {
+      "listing": "Listing",
+      "status": "Status",
+      "plan": "Plan",
+      "views": "Views",
+      "clicks": "Clicks",
+      "favorites": "Favorites"
+    },
+    "status": {
+      "PENDING": "In review",
+      "APPROVED": "Published",
+      "REJECTED": "Rejected",
+      "ARCHIVED": "Paused"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "email": "Email",
+      "password": "Password",
+      "signingIn": "Signing in…",
+      "signIn": "Sign in",
+      "continueWithGoogle": "Continue with Google",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "invalidCredentials": "Incorrect email or password"
+    },
+    "register": {
+      "title": "Create account",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "creating": "Creating…",
+      "create": "Create account",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "success": "Account created"
+    }
+  },
+  "pricing": {
+    "metaTitle": "Pricing",
+    "metaDescription": "Publishing plans for your directory listing.",
+    "heading": "Publishing plans",
+    "subheading": "Choose the plan that best fits your listing.",
+    "popular": "Popular",
+    "free": "Free",
+    "perMonth": "/mo",
+    "basic": {
+      "name": "Basic Listing",
+      "description": "Publish your tool and appear in the directory.",
+      "features": [
+        "Full listing page",
+        "Outbound link",
+        "Standard moderation"
+      ],
+      "cta": "Publish for free"
+    },
+    "featured": {
+      "name": "Featured Listing",
+      "description": "More visibility and priority in search results.",
+      "features": [
+        "Everything in Basic",
+        "\"Featured\" badge",
+        "Priority placement",
+        "Click analytics"
+      ],
+      "cta": "Get started"
+    },
+    "sponsor": {
+      "name": "Top Sponsor",
+      "description": "Maximum exposure on the homepage and key categories.",
+      "features": [
+        "Everything in Featured",
+        "Fixed spot on the homepage",
+        "\"Sponsor\" badge",
+        "Priority support"
+      ],
+      "cta": "Become a Sponsor"
+    }
+  },
+  "categoryPage": {
+    "metaDescriptionFallback": "Listings in the {category} category"
+  },
+  "listingDetail": {
+    "reviewsCount": "({count} reviews)",
+    "reviewsHeading": "Reviews",
+    "loginToReview": "Sign in to leave a review",
+    "noReviews": "No reviews yet for this listing."
+  },
+  "directoryPage": {
+    "metaTitle": "Directory",
+    "metaDescription": "Explore all verified listings and filter by category, price and rating.",
+    "results": "{count} results"
+  },
+  "claim": {
+    "verified": "Verified listing",
+    "pending": "Claim request under review",
+    "success": "Request sent. An admin will review it soon.",
+    "trigger": "Claim this listing",
+    "title": "Claim \"{title}\"",
+    "description": "Confirm that you own or represent this business. An admin will review your request before transferring the listing to you.",
+    "messageLabel": "Tell us how to verify it (optional)",
+    "messagePlaceholder": "E.g.: I'm the founder, my work email is..., I can verify it from the company domain…",
+    "sending": "Sending…",
+    "submit": "Send request"
+  },
+  "gallery": {
+    "screenshotAlt": "{alt} — screenshot {index}",
+    "galleryOf": "Gallery of {alt}",
+    "close": "Close"
+  },
+  "favorite": {
+    "save": "Save",
+    "saved": "Saved"
+  },
+  "outbound": {
+    "visitWebsite": "Visit website"
+  },
+  "reviewForm": {
+    "selectRating": "Select a rating",
+    "placeholder": "Tell us about your experience (optional)",
+    "sending": "Sending…",
+    "submit": "Submit review",
+    "success": "Review submitted, it will be visible after moderation"
+  },
+  "pagination": {
+    "pageOf": "Page {page} of {pageCount}"
+  },
+  "filters": {
+    "view": "View",
+    "sortBy": "Sort by",
+    "newest": "Newest",
+    "popular": "Most popular",
+    "rating": "Top rated",
+    "price": "Price",
+    "free": "Free",
+    "paid": "Paid",
+    "badges": "Badges",
+    "verified": "Verified",
+    "featured": "Featured",
+    "categories": "Categories",
+    "all": "All"
+  },
+  "home": {
+    "featured": "Featured",
+    "viewAll": "View all",
+    "ctaHeading": "Have a tool or resource?",
+    "ctaSubheading": "Publish it for free, or pick a featured plan to get more visibility.",
+    "ctaPublish": "Publish listing",
+    "ctaPricing": "View pricing"
+  },
+  "featureBento": {
+    "heading": "Everything you need to stand out",
+    "subheading": "A directory built both for people searching and for people publishing.",
+    "search": {
+      "title": "Instant search",
+      "description": "Filter by category, price and rating with no page reload. Real-time results."
+    },
+    "verified": {
+      "title": "Verified listings",
+      "description": "Every submission goes through moderation before appearing in the directory."
+    },
+    "analytics": {
+      "title": "Analytics included",
+      "description": "Views, clicks and favorites per listing, available in your dashboard."
+    },
+    "featured": {
+      "title": "Stand out from the crowd",
+      "description": "Featured and Sponsor plans to get more visibility in front of your audience."
+    }
+  },
+  "stats": {
+    "listings": "Listed tools",
+    "categories": "Categories",
+    "reviews": "Verified reviews",
+    "clicks": "Clicks generated"
+  },
+  "hero": {
+    "badge": "50+ verified tools",
+    "title": "Find the best <highlight>tools</highlight> for your industry",
+    "subtitle": "A curated directory, with real reviews and verified listings. Publish yours in minutes."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "directory": "Directory",
+    "pricing": "Pricing",
+    "publish": "Publish"
+  }
+}
